@@ -378,12 +378,14 @@ class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
                 ),
                 value: [_selectedRange.start, _selectedRange.end],
                 onValueChanged: (dates) {
-                  if (dates[0] != null && dates[1] != null)
+                  if (dates.length == 2)
+
 {
                     setState(() {
                       _selectedRange = DateTimeRange(
-                        start: dates[0] as DateTime,
-                        end: dates[1] as DateTime,
+                        start: dates[0],
+                        end: dates[1],
+
 
                       );
                     });
