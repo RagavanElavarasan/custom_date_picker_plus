@@ -188,7 +188,7 @@ class _CustomDatePickerDialogState extends State<_CustomDatePickerDialog> {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: widget.borderRadius),
       child: Container(
-        width: widget.dialogWidth,
+        //width: widget.dialogWidth,
         height: widget.dialogHeight,
         decoration: BoxDecoration(
           color: widget.isDarkMode ? Colors.grey[900] : Colors.white,
@@ -272,7 +272,7 @@ class _CustomYearPickerDialogState extends State<_CustomYearPickerDialog> {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Container(
-        width: widget.dialogWidth,
+        //width: widget.dialogWidth,
         height: widget.dialogHeight,
         decoration: BoxDecoration(
           color: widget.isDarkMode ? Colors.grey[900] : Colors.white,
@@ -361,7 +361,7 @@ class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: widget.borderRadius),
       child: Container(
-        width: widget.dialogWidth,
+        //width: widget.dialogWidth,
         height: widget.dialogHeight,
         decoration: BoxDecoration(
           color: widget.isDarkMode ? Colors.grey[900] : Colors.white,
