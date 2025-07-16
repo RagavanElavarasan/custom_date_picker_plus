@@ -1,7 +1,7 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart' as cdp2;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:custom_date_picker_plus/custom_date_picker_plus.dart';
+import 'package:custom_date_picker_plus_pro/custom_date_picker_plus_pro.dart';
 import 'package:intl/intl.dart';
 
 void main() {

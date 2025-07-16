@@ -1,4 +1,4 @@
-import 'package:custom_date_picker_plus/custom_date_picker_plus.dart';
+import 'package:custom_date_picker_plus/custom_date_picker_plus_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Custom Date Picker Plus Demo',
+      title: 'Custom Date Picker plus_pro Demo',
       theme: ThemeData(primarySwatch: Colors.teal),
       home: const CustomPickerExample(),
     );
@@ -35,7 +35,7 @@ class _CustomPickerExampleState extends State<CustomPickerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Custom Date Picker Plus Demo')),
+      appBar: AppBar(title: const Text('Custom Date Picker plus_pro Demo')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

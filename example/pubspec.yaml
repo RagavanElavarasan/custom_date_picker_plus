@@ -1,8 +1,8 @@
-name: custom_date_picker_plus_example
+name: custom_date_picker_plus_pro_example
 description: A customizable Flutter package for date, time, year, and range pickers with extensive customization options.
 version: 1.0.0
-homepage: https://github.com/RagavanElavarasan/custom_date_picker_plus
-repository: https://github.com/RagavanElavarasan/custom_date_picker_plus.git
+homepage: https://github.com/RagavanElavarasan/custom_date_picker_plus_pro
+repository: https://github.com/RagavanElavarasan/custom_date_picker_plus_pro.git
 
 environment:
   sdk: '>=2.19.0 <4.0.0'
