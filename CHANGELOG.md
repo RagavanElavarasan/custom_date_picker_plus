@@ -1,6 +1,6 @@
 Changelog
 
-1.0.0
+1.0.3
 
 
 
@@ -23,3 +23,7 @@ Multi-language support via the intl package.
 
 
 Range picker powered by the calendar_date_picker2 package.
+
+
+
+Code Formatted
