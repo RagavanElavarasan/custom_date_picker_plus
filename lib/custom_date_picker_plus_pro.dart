@@ -1,5 +1,5 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart' as cdp2;
-import 'package:flutter/material.dart' ;
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 /// A customizable picker package for Flutter providing date, time, year, and range selection.
@@ -60,7 +60,8 @@ class CustomPickers {
         return Theme(
           data: isDarkMode ? ThemeData.dark() : ThemeData.light(),
           child: MediaQuery(
-            data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: use24HourFormat),
+            data: MediaQuery.of(context)
+                .copyWith(alwaysUse24HourFormat: use24HourFormat),
             child: child!,
           ),
         );
@@ -215,7 +216,9 @@ class _CustomDatePickerDialogState extends State<_CustomDatePickerDialog> {
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context, _selectedDate),
-                    child: Text(widget.confirmText, style: widget.textStyle.copyWith(color: widget.primaryColor)),
+                    child: Text(widget.confirmText,
+                        style: widget.textStyle
+                            .copyWith(color: widget.primaryColor)),
                   ),
                 ],
               ),
@@ -299,7 +302,9 @@ class _CustomYearPickerDialogState extends State<_CustomYearPickerDialog> {
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context, _selectedDate),
-                    child: Text(widget.confirmText, style: widget.textStyle.copyWith(color: widget.primaryColor)),
+                    child: Text(widget.confirmText,
+                        style: widget.textStyle
+                            .copyWith(color: widget.primaryColor)),
                   ),
                 ],
               ),
@@ -343,7 +348,8 @@ class _CustomRangePickerDialog extends StatefulWidget {
   });
 
   @override
-  _CustomRangePickerDialogState createState() => _CustomRangePickerDialogState();
+  _CustomRangePickerDialogState createState() =>
+      _CustomRangePickerDialogState();
 }
 
 class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
@@ -371,28 +377,22 @@ class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
           children: [
             Expanded(
               child: cdp2.CalendarDatePicker2(
-                config: cdp2.CalendarDatePicker2Config(
-                  calendarType: cdp2.CalendarDatePicker2Type.range,
-                  selectedDayHighlightColor: widget.primaryColor,
-                  centerAlignModePicker: widget.centerLeadingDate,
-                ),
-                value: [_selectedRange.start, _selectedRange.end],
-                onValueChanged: (dates) {
-                  if (dates.length == 2)
-
-{
-                    setState(() {
-                      _selectedRange = DateTimeRange(
-                        start: dates[0],
-                        end: dates[1],
-
-
-                      );
-                    });
-                  }
-                }
-
-              ),
+                  config: cdp2.CalendarDatePicker2Config(
+                    calendarType: cdp2.CalendarDatePicker2Type.range,
+                    selectedDayHighlightColor: widget.primaryColor,
+                    centerAlignModePicker: widget.centerLeadingDate,
+                  ),
+                  value: [_selectedRange.start, _selectedRange.end],
+                  onValueChanged: (dates) {
+                    if (dates.length == 2) {
+                      setState(() {
+                        _selectedRange = DateTimeRange(
+                          start: dates[0],
+                          end: dates[1],
+                        );
+                      });
+                    }
+                  }),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -405,7 +405,9 @@ class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context, _selectedRange),
-                    child: Text(widget.confirmText, style: widget.textStyle.copyWith(color: widget.primaryColor)),
+                    child: Text(widget.confirmText,
+                        style: widget.textStyle
+                            .copyWith(color: widget.primaryColor)),
                   ),
                 ],
               ),
@@ -418,7 +420,6 @@ class _CustomRangePickerDialogState extends State<_CustomRangePickerDialog> {
 }
 
 /// Configuration class for CalendarDatePicker2
-
 
 /// Example usage widget
 class CustomPickerExample extends StatefulWidget {

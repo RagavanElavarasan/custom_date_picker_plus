@@ -7,18 +7,26 @@ void main() {
 
   setUp(() {
     // Simulate a large screen to avoid overflow
-    TestWidgetsFlutterBinding.ensureInitialized().window.physicalSizeTestValue = const Size(1080, 1920);
-    TestWidgetsFlutterBinding.ensureInitialized().window.devicePixelRatioTestValue = 1.0;
+    TestWidgetsFlutterBinding.ensureInitialized().window.physicalSizeTestValue =
+        const Size(1080, 1920);
+    TestWidgetsFlutterBinding.ensureInitialized()
+        .window
+        .devicePixelRatioTestValue = 1.0;
   });
 
   tearDown(() {
     // Reset screen size after each test
-    TestWidgetsFlutterBinding.ensureInitialized().window.clearPhysicalSizeTestValue();
-    TestWidgetsFlutterBinding.ensureInitialized().window.clearDevicePixelRatioTestValue();
+    TestWidgetsFlutterBinding.ensureInitialized()
+        .window
+        .clearPhysicalSizeTestValue();
+    TestWidgetsFlutterBinding.ensureInitialized()
+        .window
+        .clearDevicePixelRatioTestValue();
   });
 
   group('CustomPickers Tests', () {
-    testWidgets('showCustomDatePicker opens dialog and returns selected date', (WidgetTester tester) async {
+    testWidgets('showCustomDatePicker opens dialog and returns selected date',
+        (WidgetTester tester) async {
       final initialDate = DateTime(2025, 1, 1);
       final firstDate = DateTime(2000);
       final lastDate = DateTime(2100);
@@ -51,7 +59,8 @@ void main() {
       await tester.pumpAndSettle();
     });
 
-    testWidgets('showCustomTimePicker opens dialog and returns selected time', (WidgetTester tester) async {
+    testWidgets('showCustomTimePicker opens dialog and returns selected time',
+        (WidgetTester tester) async {
       final initialTime = const TimeOfDay(hour: 12, minute: 0);
 
       await tester.pumpWidget(
@@ -81,7 +90,8 @@ void main() {
       await tester.pumpAndSettle();
     });
 
-    testWidgets('showCustomYearPicker opens dialog and returns selected year', (WidgetTester tester) async {
+    testWidgets('showCustomYearPicker opens dialog and returns selected year',
+        (WidgetTester tester) async {
       final initialDate = DateTime(2025);
       final firstDate = DateTime(2000);
       final lastDate = DateTime(2100);
@@ -114,7 +124,8 @@ void main() {
       await tester.pumpAndSettle();
     });
 
-    testWidgets('showCustomRangePicker opens dialog and returns selected range', (WidgetTester tester) async {
+    testWidgets('showCustomRangePicker opens dialog and returns selected range',
+        (WidgetTester tester) async {
       final initialDateRange = DateTimeRange(
         start: DateTime(2025, 1, 1),
         end: DateTime(2025, 1, 7),
